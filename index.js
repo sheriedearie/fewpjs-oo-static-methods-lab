@@ -6,7 +6,7 @@ class Formatter {
    return str.replace(/[^A-Za-z0-9 '-]/g, '') ;
   }
 
-  static titleize(strg){
-    return strg.replace(/\b\w/g, l => l.toUpperCase())
+  static titleize(text){
+   return text.replace("the, a, an, but, of, and, for, at, by,from", '').toLowerCase();
   }
 }
