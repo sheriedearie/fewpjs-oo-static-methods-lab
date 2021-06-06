@@ -3,11 +3,10 @@ class Formatter {
     return string.charAt(0).toUpperCase() + string.slice(1);
   }
   static sanitize (str){
-    str.replace(/[^-, , '','A-Za-z0-9]+/g);
-    console.log(str)
+   return str.replace(/[^A-Za-z0-9 '-]/g, '') ;
   }
 
-  static titleize(){
-
+  static titleize(strg){
+    return strg.replace(/\b\w/g, l => l.toUpperCase())
   }
 }
