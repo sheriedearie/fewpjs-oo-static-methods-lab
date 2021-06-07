@@ -11,9 +11,9 @@ class Formatter {
     const prohibitedList = ['the', 'a', 'an', 'but', 'of', 'and', 'for', 'at', 'by', 'from']
     const newArray = []
     splitText.forEach((el) => {
-      if (splitText[0] = el){
-        return text;
-      }
+      if (splitText[0] === el){  
+        newArray.push(el[0].toUpperCase() + el.slice(1))
+        }
       else if (!prohibitedList.includes(el)) {
         newArray.push(el[0].toUpperCase() + el.slice(1))
       } else {
